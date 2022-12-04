@@ -1,0 +1,26 @@
+{% extends 'hofvid/base.html' %}
+{%load static%}
+{%block title%}Create Hall{%endblock%}
+{%block stylesheet%}
+<link rel='stylesheet' href="{%static 'create_hall.css'%}">
+{%endblock%}
+{% block content %}
+<div class="container">
+<h2>Create Hall</h2>
+<form method="post">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    {% for field in form %}
+        <div class="form-group {% if field.errors %} alert alert-danger {% endif %}">
+        {{ field.errors }}
+            <strong>{{ field.label_tag }}</strong>
+        {% render_field field class='form-control' %}
+
+        </div>
+
+    {% endfor %}
+    <button class="btn btn-outline-primary" type="submit">Create Hall</button>
+</form>
+
+</div>
+{% endblock %}

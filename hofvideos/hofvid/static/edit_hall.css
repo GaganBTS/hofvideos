@@ -1,0 +1,35 @@
+.container{
+    margin-top:8%;
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+    
+}
+.container h2{
+    text-align: center;
+    margin-bottom:5%;
+}
+form{
+    display: inline;
+    
+}
+.frm{
+    display:block;
+    margin-bottom:2%;
+    
+}
+@media only screen and (min-width:150px) and (max-width:768px){
+    .container{
+        margin-top:23%;
+        width: 90%;
+    }
+    .container h2{
+        margin-bottom:6%;
+        font-size: large;
+        text-align: center;
+    }
+    .frm{
+        width: 60%;
+        margin-bottom:4%;
+    }
+}

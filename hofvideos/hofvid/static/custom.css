@@ -1,0 +1,52 @@
+html{
+  scroll-behavior: smooth;
+}
+.jumbotron {
+  background-color: #EBF4FA;
+  margin-top: 3%;
+}
+.container{
+  margin-top: 4%;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+.navbar-nav{
+  margin-left: auto;
+}
+.jumbotron .container {
+  max-width: 51rem;
+}
+#myBtn3  {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: blue;
+  color: white;
+  cursor: pointer;
+    padding: 10px;
+  border-radius: 25px;
+}
+
+#myBtn3:hover {
+ transform: scale(1.2);
+}
+
+h2{
+  margin: 2%;
+}
+
+@media only screen and (min-width:200px) and (max-width:450px){
+  .jumbotron{
+    margin-top:0%;
+  }
+  .container{
+    margin-top: 10%;
+  }
+ 
+}

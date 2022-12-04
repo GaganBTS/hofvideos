@@ -1,0 +1,17 @@
+{% extends 'hofvid/base.html' %}
+{% load static %}
+{%block title%}Delete Hall{%endblock%}
+{%block stylesheet%}
+<link rel='stylesheet' href="{% static 'delete_hall.css'%}">
+{%endblock%}
+{% block content %}
+<div class="container">
+<h2>Are you sure you want to delete '{{hall.title|capfirst}}' hall?</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-danger" type="submit">Delete</button>
+</form>
+    
+</div>
+{% endblock %}

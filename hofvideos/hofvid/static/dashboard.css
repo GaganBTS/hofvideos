@@ -1,0 +1,14 @@
+.container{
+    margin-top:7%;
+}
+@media only screen and (min-width:150px) and (max-width:768px){
+    .container{
+        margin-top:20%;
+    }
+    .text-center{
+        margin-bottom:8%;
+    }
+    .container h2{
+        margin-bottom:5%;
+    }
+}

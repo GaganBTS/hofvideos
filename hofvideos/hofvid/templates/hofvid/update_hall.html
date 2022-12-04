@@ -1,0 +1,25 @@
+{% extends 'hofvid/base.html' %}
+{% load static %}
+{%block title%}Edit Hall{%endblock%}
+{%block stylesheet%}
+<link rel='stylesheet' href="{% static 'edit_hall.css' %}">
+{%endblock%}
+{% block content %}
+<div class="container">
+{% if hall.user == user %}
+<h2>Edit Hall - {{hall.title|title}}</h2>
+<form method="post">
+    {% csrf_token %}
+    {% load widget_tweaks %}
+    {% for field in form %}
+        
+        {{ field.errors }}
+           <strong> {{ field.label_tag }}</strong>
+        {% render_field field class='frm' %}
+        {% endfor %}
+    <button class="btn btn-primary" type="submit">Update</button>
+</form>
+<a  href="{% url 'delete_hall'  hall.id%}" class="btn btn-danger">Delete this Hall</a>
+</div>
+    {% endif %}
+{% endblock %}
